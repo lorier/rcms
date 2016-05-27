@@ -63,21 +63,12 @@ function kickstart_read_more_link() {
     return '<a class="more-link" href="' . get_permalink() . '">' . __( 'Read More', 'lean-kickstart' ) . '</a>';
 }
 
-// End MCN Init Functions
-////////////////////////////////////
-
 
 //* Reposition the secondary navigation menu
 remove_action( 'genesis_after_header', 'genesis_do_subnav' );
 // add_action( 'genesis_header', 'rcms_secondary_nav', 1 );
 
-// function rcms_secondary_nav(){
-// 	echo '<div id="nav-secondary-wrap" class="mobile-hidden "><div class="wrap">';
-// 	genesis_do_subnav();
-// 	echo '</div></div>';
-// }
-// //* Remove secondary navigation menu
-// add_theme_support( 'genesis-menus', array( 'primary' => __( 'Primary Navigation Menu', 'genesis' ) ) );
+
 
 add_action('genesis_header', 'rcms_subnav_portal_logins', 0);
 function rcms_subnav_portal_logins(){
@@ -116,6 +107,24 @@ function rcms_remove_post_title(){
 		remove_action( 'genesis_entry_header', 'genesis_do_post_title');
 	}
 }
+//Add ACF blocks 
+add_action('genesis_after_header', 'rcms_add_header_text',15 );
+function rcms_add_header_text(){
+	$header_title = get_field('header_title');
+	$header_subtitle = get_field('header_subtitle');
+	if(is_front_page() && !empty($header_title) ){
+		$output = '<div class="hero"><div class="wrap">';
+		$output .= '<div class="hero-text ">';
+		$output .= '<div class="hero-title">'.$header_title.'</div>';
+		if(!empty($header_subtitle)){
+			$output .= '<div class="hero-subtitle">'.$header_subtitle.'</div>';
+		}
+		$output .= '</div></div></div>';
+		echo $output;
+	}
+
+}
+
 // Enable shortcode use in widgets
 add_filter('widget_text', 'do_shortcode');
 

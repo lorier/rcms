@@ -2181,7 +2181,7 @@ Media Queries
 
 	.js .genesis-nav-menu .menu-item:hover > a {
 		background-color: #e4e4e4;
-		color: #999;
+		// color: #999;
 	}
 
 	.js .genesis-nav-menu .menu-item a:hover,
@@ -2247,9 +2247,9 @@ Media Queries
 		padding: 0;
 	}
 
-	.site-header .widget-area .genesis-nav-menu {
-		padding-bottom: 20px;
-	}
+	// .site-header .widget-area .genesis-nav-menu {
+	// 	padding-bottom: 20px;
+	// }
 
 	.before-content,
 	.home-top-slider,

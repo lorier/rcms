@@ -183,7 +183,7 @@
 // Navigation
 body .genesis-nav-menu {
     clear: both;
-    font-family: 'SofiaProRegular',sans-serif;
+    font-family: $headline-font;
     font-size: 12px;
     font-weight: 400;
     line-height: 1;
@@ -222,49 +222,49 @@ body .genesis-nav-menu {
 		display: block;
 	}
 }
-#nav-secondary-wrap.mobile-hidden .portal-logins{
-	display: inline-block;
-	float: right;
-	width: auto;
-}
-#nav-secondary-wrap {
-	background-color: $blue;
-	color: white;
-	width: auto;
-}
-#menu-secondary-nav {
-    font-family: 'SofiaProRegular', sans-serif;
-	float: left;
-	width: auto;
-	display: inline-block;
-	clear: none;
-	.menu-item {
-		background-color: transparent;
-	}
-	.menu-item:hover a, .menu-item:focus a {
-		background-color: transparent;
-		text-decoration: underline;
-		color: white;
-	}
+// #nav-secondary-wrap.mobile-hidden .portal-logins{
+// 	display: inline-block;
+// 	float: right;
+// 	width: auto;
+// }
+// #nav-secondary-wrap {
+// 	background-color: $blue;
+// 	color: white;
+// 	width: auto;
+// }
+// #menu-secondary-nav {
+//     font-family: 'SofiaProRegular', sans-serif;
+// 	float: left;
+// 	width: auto;
+// 	display: inline-block;
+// 	clear: none;
+// 	.menu-item {
+// 		background-color: transparent;
+// 	}
+// 	.menu-item:hover a, .menu-item:focus a {
+// 		background-color: transparent;
+// 		text-decoration: underline;
+// 		color: black;
+// 	}
 
-	.current-menu-item a {
-		background-color: transparent;
-		color: white;
-	}
-	.current-menu-item span {
-		font-weight: bold;
-		text-decoration: underline;
-	}
-	//Change focus from outline to underline
-	.menu-item a:focus {
-		outline: none;	
-		text-decoration: underline;
-	}	
-}
+// 	.current-menu-item a {
+// 		background-color: transparent;
+// 		color: black;
+// 	}
+// 	.current-menu-item span {
+// 		font-weight: bold;
+// 		text-decoration: underline;
+// 	}
+// 	//Change focus from outline to underline
+// 	.menu-item a:focus {
+// 		outline: none;	
+// 		text-decoration: underline;
+// 	}	
+// }
+// 
 // Main Nav
 .site-header {
-	background: $dark-gray url(images/header_home.jpg) no-repeat center top;
-	height: 524px;
+	background-color: transparent;
 }
 .site-header .widget-area.header-widget-area {
 	padding-top: 39px;
@@ -279,6 +279,9 @@ body .genesis-nav-menu {
     	background-color: white;
     	color: black;
     }
+    &.current-menu-item:hover a {
+    	color: white;
+    }
     a {
     	text-transform: none;
     	color: white;
@@ -289,15 +292,16 @@ body .genesis-nav-menu {
     	background-color: transparent;
     }
     &:hover a span, &.current-menu-item a span {
-    	text-decoration: underline;
+    	// text-decoration: underline;
     	background-color: transparent;
     }
     &:hover a:after {
 		text-decoration: none;
     } 
     &.current-menu-item a {
+    	color: $orange;
     	background-color: transparent;
-    	font-weight: bold;
+    	// text-decoration: underline;
     }
 
     &.menu-item-has-children > a:after {
@@ -322,7 +326,7 @@ body .genesis-nav-menu {
     }
     .sub-menu a:hover {
     	color: black;
-    	text-decoration: underline;
+    	// text-decoration: underline;
     }
     .sub-menu .menu-item {
     	border-bottom: 1px solid $gray-rule;
@@ -332,7 +336,7 @@ body .genesis-nav-menu {
     }
     a:focus {
 		outline: none;	
-		text-decoration: underline;
+		// text-decoration: underline;
 	}
 	&.current-menu-item .sub-menu a {
 		font-weight: 300 !important;
@@ -363,24 +367,36 @@ body .genesis-nav-menu {
 		li {
 			display: inline-block;
 			margin: 8px 5px;
-			width: 42%;
+			width: 46%;
+			border: 1px solid white;
+			&:hover {
+				a {
+					text-decoration: underline;
+				}
+			}
 		}
 		a {
-			font-size: 18px;
+			font-size: 14px;
 			font-weight: 300;
-			padding: 0px 20px;
+			color: white;
+			padding: 5px 15px;
 			line-height: 20px;
+			text-align: center;
 		}
+
 	}
 }
 // Hamburger Menu
 @media screen and (max-width: $mobile-nav-down){
 
 	.site-header {
-		background-color: white;
+		// background-color: white;
 	}
 	.site-header .widget-area.header-widget-area {
 		padding: 0;
+	}
+	ul#menu-main-navigation{
+		background-color: white;
 	}
 	.menu-toggle.nav-primary {
 		float: right;
@@ -406,6 +422,7 @@ body .genesis-nav-menu {
 		float: left;
 		height: 80px;
 	}
+
 	//turn off hover for mobile
 	.js nav .genesis-nav-menu .menu-item:hover {
 		// background-color: transparent;
@@ -413,8 +430,17 @@ body .genesis-nav-menu {
 			text-decoration: none;
 		}
 	}
+	.js .genesis-nav-menu .menu-item a {
+	    border: none;
+	    color: black;
+	    margin: 0;
+	    padding: 10px 5%;
+	    width: 100%;
+	}
 	.js .genesis-nav-menu .menu-item:hover>a {
 		background-color: transparent;
+		color: black;
+		// text-decoration: underline;
 	}
 	.js .menu-toggle:focus, 
 	.js nav .genesis-nav-menu .menu-item .sub-menu li a:focus, 
@@ -426,16 +452,16 @@ body .genesis-nav-menu {
 		text-decoration: none;
 	 }
 	 .js .genesis-nav-menu .menu-item a {
-	 	color: black;
+	 	// color: black;
 	 	&:hover {
-	 		color: black;
+	 		// color: black;
 	 	}
 	 }
 	.nav-primary ul {
 		border-top: 1px solid $gray-rule;
 	}
 	.nav-primary .menu-item.current-menu-item a {
-	    background-color: white;
+	    // background-color: black;
 	}
 	.nav-primary .menu-item.current-menu-item a span {
 	    text-decoration: none;
@@ -453,7 +479,7 @@ body .genesis-nav-menu {
 	}
 
 	.nav-primary .menu-item:hover a span {
-		color: black;
+		// color: black;
 	}
 	.nav-primary .menu-item.schedule-now:hover a span{
 		color: $blue;

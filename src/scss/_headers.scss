@@ -1,5 +1,97 @@
 // // ==== HEADERS ==== //
-// Kickstart bulk overrides
+// 
+// 
+// 
+// 
+.hero {
+	margin-top: -141px;
+	padding-top: 141px;
+}
+.home .hero {
+	background: $dark-gray url(images/header_home.jpg) no-repeat center top;
+	height: 524px;
+	position: relative;
+	z-index: -99;
+	.hero-text {
+		width: 500px;
+		color: white;
+
+		hr {
+			color: $orange;
+			width: 142px;
+			border-top: 2px solid $orange;
+			border-style: solid;
+		}
+		h1 {
+			font-size: 23px;
+			color: white;
+		}
+		.large-word {
+			font-size: 76px;
+			padding-top: 25px;
+			text-transform: uppercase;
+			display: inline-block;
+		}
+		.hero-subtitle{
+			font-size: 17px;
+		}
+		
+	}
+	@media screen and (max-width: $mobile-nav-down){
+		background-position: left top;
+		.hero-text {
+			margin: 0 auto
+		}	
+	}
+	@media screen and (max-width: $mobile-nav-down){
+		background-position: left top;
+		.hero-text {
+			width: 310px;
+			margin: 0 auto
+			h1 {
+				font-size: 17px;
+				color: white;
+			}
+			.large-word {
+				font-size: 50px;
+				padding-top: 18px;
+			}
+		}	
+	}
+}
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// OLD Kickstart bulk overrides
 .before-contact, .before-content, .home-top-slider  {
 	position: inherit;
 }
