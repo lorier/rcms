@@ -112,7 +112,7 @@ add_action('genesis_after_header', 'rcms_add_header_text',15 );
 function rcms_add_header_text(){
 	$header_title = get_field('header_title');
 	$header_subtitle = get_field('header_subtitle');
-	if(is_front_page() && !empty($header_title) ){
+	if(is_page() && !empty($header_title) ){
 		$output = '<div class="hero"><div class="wrap">';
 		$output .= '<div class="hero-text ">';
 		$output .= '<div class="hero-title">'.$header_title.'</div>';
@@ -129,7 +129,7 @@ function rcms_add_header_text(){
 add_filter('widget_text', 'do_shortcode');
 
 // Add banner containers and titles
-add_action('genesis_after_header', 'rcms_banner_strip' );
+// add_action('genesis_after_header', 'rcms_banner_strip' );
 function rcms_banner_strip(){
 	if ( !is_front_page() ){
 		global $post;

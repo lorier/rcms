@@ -1,6 +1,5 @@
 // --- Pagebuilder Classes --- //
 
-
 .desktop-max-width-six {
 	max-width: 600px;
 	margin: 0 auto;
@@ -62,8 +61,11 @@
 //content-specific vert margin correction
 
 //Home page
-#pl-4 > .panel-grid{
-	margin-bottom: 0;
+// #pl-4 > .panel-grid{
+// 	margin-bottom: 0;
+// }
+#pl-9 > .panel-grid {
+	margin-bottom: 0 !important;
 }
 
 //Home Page Panels
