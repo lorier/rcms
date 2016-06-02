@@ -1,0 +1,28 @@
+// Shortcode classes
+// 
+.orange-panel {
+	background-color: $orange;
+	padding: 20px;
+	position: relative;
+	float: left;
+	clear: left;
+	p {
+		max-width: 60%;
+	}
+	.outline-button {
+		position: absolute;
+		top: 35%;
+		right: 20px;
+	}
+}
+.blue-panel {
+	background-color: $blue;
+	padding: 20px;
+	position: relative;
+	clear: left;
+	float: left;
+	.solid-button {
+		background-color: #fff;
+
+	}
+}

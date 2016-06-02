@@ -59,6 +59,30 @@
 		}	
 	}
 }
+//Mystery Shopping
+.page-id-6 .hero {
+	background-color: $dark-blue;
+	.wrap{
+	}
+	.hero-text {
+		background: $dark-blue url('images/binoculars-large.png') 0 0 no-repeat;
+		padding-left: 200px;
+		max-width: 800px;
+		margin: 0 auto;
+		padding-bottom: 30px;
+	}
+	.hero-title, 
+	.hero-title h1 {
+		font-size: 43px;
+		color: $orange;
+		text-transform: uppercase;
+		padding-bottom: 0;
+	}
+	.hero-subtitle {
+		color: #fff;
+		font-size: 18px;
+	}
+}
 // 
 // 
 // 

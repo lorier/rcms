@@ -9,8 +9,7 @@
 	margin: 0 auto;
 }
 .desktop-max-width-eight {
-	max-width: 800px;
-	margin: 0 auto;
+	
 }
 .no-bullets ul {
 	margin: 0;
@@ -64,6 +63,7 @@
 // #pl-4 > .panel-grid{
 // 	margin-bottom: 0;
 // }
+#pl-4 > .panel-grid,
 #pl-9 > .panel-grid {
 	margin-bottom: 0 !important;
 }
@@ -134,99 +134,128 @@
 	}
 
 }
-// Services and Expertise top panels
-#expertise-panel {
-	.panel-grid .panel-grid-cell {
-		padding: 0;
-	}
-	&.panel-grid > .panel-grid-cell {
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-	.expertise-panel {
-		border: 1px solid $gray-rule;
-	}
-	.expertise-panel .panel-grid {
-		margin-bottom: 0px;
-	}
-	.expertise-panel a {
+.portal-band {
+	font-size: 18px;
+	a, 
+	a:hover,
+	a:active,
+	a:hover,
+	a:visited,
+	a:focus {
 		color: black;
-		&:after {
-			font-family: 'FontAwesome';
-			content: '\f105';
-			font-size: 12px;
-			position: relative;
-			top: 0px;
-			right: -5px;;
-		}
+		text-decoration: underline;
 	}
-	.expertise-panel-header-row .panel-grid-cell {
-		width: 100%;
-	}
-	.expertise-panel-header {
-		width: 100%;
-		display: table;
-		h3 {
-			display: table-cell;
-			vertical-align: middle;
-			margin-bottom: 0;
-			color: white;
-		}
-	}
-	.siteorigin-widget-tinymce {
-		p:last-child {
-			margin-bottom: 0;
-		}
-	}
-	.so-panel .panel-widget-style {
-		// padding: 0 !important;
-	}
-	.widget_siteorigin-panels-builder {
-		margin-bottom: 0 !important;
-	}
-	.expertise-panel.panel-widget-style {
-		border-bottom: none !important;
-
-	}
+	padding-top: 20px;
+	padding-bottom: 0px;
 
 }
-//height of panels for expertise page
-
-// services
-.page-id-8 #expertise-panel {
-	.expertise-panel {
-		height: 320px;
-		@media screen and (max-width: 1024px) {
-			height: 400px;
+.widget_ink-tabs {
+	max-width: 800px;
+	margin: 0 auto;
+	.tabs {
+		margin-left: 0;
+		margin-bottom: 20px !important;
+		li.tab-title {
+			margin-right: 20px !important;
 		}
-		@media screen and (max-width: 850px) {
-			height: 450px;
-		}
-		@media screen and (max-width: 780px) {
-			height: auto;
-		}
-	}
-	.expertise-panel-header {
-		min-height: 75px;
-	}
-}
-
-
-// expertise
-.page-id-9 #expertise-panel {
-	.expertise-panel {
-		height: 250px;
-		@media screen and (max-width: 950px) {
-			height: 300px;
-		}
-		@media screen and (max-width: 780px) {
-			height: auto;
-		}
-		.expertise-panel-header {
-			min-height: 95px;
+		.tab-title a {
+			padding: 10px 0;
 		}
 	}
 }
+// // Services and Expertise top panels
+// #expertise-panel {
+// 	.panel-grid .panel-grid-cell {
+// 		padding: 0;
+// 	}
+// 	&.panel-grid > .panel-grid-cell {
+// 		padding-left: 10px;
+// 		padding-right: 10px;
+// 	}
+// 	.expertise-panel {
+// 		border: 1px solid $gray-rule;
+// 	}
+// 	.expertise-panel .panel-grid {
+// 		margin-bottom: 0px;
+// 	}
+// 	.expertise-panel a {
+// 		color: black;
+// 		&:after {
+// 			font-family: 'FontAwesome';
+// 			content: '\f105';
+// 			font-size: 12px;
+// 			position: relative;
+// 			top: 0px;
+// 			right: -5px;;
+// 		}
+// 	}
+// 	.expertise-panel-header-row .panel-grid-cell {
+// 		width: 100%;
+// 	}
+// 	.expertise-panel-header {
+// 		width: 100%;
+// 		display: table;
+// 		h3 {
+// 			display: table-cell;
+// 			vertical-align: middle;
+// 			margin-bottom: 0;
+// 			color: white;
+// 		}
+// 	}
+// 	.siteorigin-widget-tinymce {
+// 		p:last-child {
+// 			margin-bottom: 0;
+// 		}
+// 	}
+// 	.so-panel .panel-widget-style {
+// 		// padding: 0 !important;
+// 	}
+// 	.widget_siteorigin-panels-builder {
+// 		margin-bottom: 0 !important;
+// 	}
+// 	.expertise-panel.panel-widget-style {
+// 		border-bottom: none !important;
+
+// 	}
+
+// }
+// //height of panels for expertise page
+
+// // services
+// .page-id-8 #expertise-panel {
+// 	.expertise-panel {
+// 		height: 320px;
+// 		@media screen and (max-width: 1024px) {
+// 			height: 400px;
+// 		}
+// 		@media screen and (max-width: 850px) {
+// 			height: 450px;
+// 		}
+// 		@media screen and (max-width: 780px) {
+// 			height: auto;
+// 		}
+// 	}
+// 	.expertise-panel-header {
+// 		min-height: 75px;
+// 	}
+// }
+
+
+// // expertise
+// .page-id-9 #expertise-panel {
+// 	.expertise-panel {
+// 		height: 250px;
+// 		@media screen and (max-width: 950px) {
+// 			height: 300px;
+// 		}
+// 		@media screen and (max-width: 780px) {
+// 			height: auto;
+// 		}
+// 		.expertise-panel-header {
+// 			min-height: 95px;
+// 		}
+// 	}
+// }
 
 
 

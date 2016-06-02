@@ -36,7 +36,6 @@ Domain Path: #{metadata(theme-text-domain-path)}
 @import "structure";
 @import "ksstyle";
 @import "navigation";
-@import "headers";
 @import "blog";
 @import "forms";
 @import "sidebar";
@@ -45,6 +44,8 @@ Domain Path: #{metadata(theme-text-domain-path)}
 @import "pagebuilder_classes";
 @import "get_started_buttons";
 @import "accordion";
+@import "headers";
+@import "shortcodes";
 
 // Reset: eliminate default browser styling (optional; commented out by default)
 //@import "reset";

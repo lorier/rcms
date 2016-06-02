@@ -128,32 +128,32 @@ function rcms_add_header_text(){
 // Enable shortcode use in widgets
 add_filter('widget_text', 'do_shortcode');
 
-// Add banner containers and titles
-// add_action('genesis_after_header', 'rcms_banner_strip' );
-function rcms_banner_strip(){
-	if ( !is_front_page() ){
-		global $post;
-		$output = '<div class="banner-strip"><h1 class="banner-title">';
-		if ( is_page() ){
-			$output .= get_the_title( $post ).'</h1></div>';
-		}
-		else if ( is_404() ){
-			$output .= 'Page Not Found</h1></div>';
-		}
-		else if ( is_search() ) {
-			$output .= 'Search Results</h1></div>';
-		}
-		else if ( is_home() || is_single() || is_archive() ){
-			global $post;
-			$title = apply_filters('the_title',get_page( get_option('page_for_posts') )->post_title );
-			$output .=  $title . '<br><span class="blog-subtitle">News, Insights & Opinions</span></h1></div>';
-		} 
-		else { //for all other possible options so the page layout doesn't break
-			$output .= get_the_title( $post ).'</h1></div>';
-		}
-		echo $output;
-	}
-}
+// // Add banner containers and titles
+// // add_action('genesis_after_header', 'rcms_banner_strip' );
+// function rcms_banner_strip(){
+// 	if ( !is_front_page() ){
+// 		global $post;
+// 		$output = '<div class="banner-strip"><h1 class="banner-title">';
+// 		if ( is_page() ){
+// 			$output .= get_the_title( $post ).'</h1></div>';
+// 		}
+// 		else if ( is_404() ){
+// 			$output .= 'Page Not Found</h1></div>';
+// 		}
+// 		else if ( is_search() ) {
+// 			$output .= 'Search Results</h1></div>';
+// 		}
+// 		else if ( is_home() || is_single() || is_archive() ){
+// 			global $post;
+// 			$title = apply_filters('the_title',get_page( get_option('page_for_posts') )->post_title );
+// 			$output .=  $title . '<br><span class="blog-subtitle">News, Insights & Opinions</span></h1></div>';
+// 		} 
+// 		else { //for all other possible options so the page layout doesn't break
+// 			$output .= get_the_title( $post ).'</h1></div>';
+// 		}
+// 		echo $output;
+// 	}
+// }
 // Add "now viewing" to tag pages 
 add_action('genesis_before_loop', 'rcms_add_tag_title');
 
