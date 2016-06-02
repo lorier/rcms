@@ -60,8 +60,18 @@ function rcms_linked_panel( $atts , $content = null ) {
 // [/orange-panel]
 add_shortcode( 'orange-panel', 'rcms_orange_panel' );
 function rcms_orange_panel( $atts , $content = null ) {
+    $atts = shortcode_atts(
+        array(
+            'class' => ''
+        ),
+        $atts,
+        'orange-panel'
+    );
+    $class = $atts['class'];
 
-    $short = '<div class="orange-panel">';
+    $short = '<div class="orange-panel ';
+    $short .= esc_attr( $class );
+    $short .= '">';
     $short .= do_shortcode($content);
     $short .= '</div>';
 
@@ -73,8 +83,18 @@ function rcms_orange_panel( $atts , $content = null ) {
 // [/blue-panel]
 add_shortcode( 'blue-panel', 'rcms_blue_panel' );
 function rcms_blue_panel( $atts , $content = null ) {
+        $atts = shortcode_atts(
+        array(
+            'class' => ''
+        ),
+        $atts,
+        'blue-panel'
+    );
+    $class = $atts['class'];
 
-    $short = '<div class="blue-panel">';
+    $short = '<div class="blue-panel ';
+    $short .= esc_attr( $class );
+    $short .= '">';
     $short .= do_shortcode($content);
     $short .= '</div>';
 
@@ -86,8 +106,18 @@ function rcms_blue_panel( $atts , $content = null ) {
 // [/white-panel]
 add_shortcode( 'white-panel', 'rcms_white_panel' );
 function rcms_white_panel( $atts , $content = null ) {
+    $atts = shortcode_atts(
+        array(
+            'class' => ''
+        ),
+        $atts,
+        'white-panel'
+    );
+    $class = $atts['class'];
 
-    $short = '<div class="white-panel">';
+    $short = '<div class="white-panel ';
+    $short .= esc_attr( $class );
+    $short .= '">';
     $short .= do_shortcode($content);
     $short .= '</div>';
 

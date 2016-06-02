@@ -59,6 +59,43 @@
 		}	
 	}
 }
+//About Page
+.page-id-9 .hero {
+	background: $dark-gray url(images/header_about.jpg) no-repeat center top;
+	height:368px;
+	position: relative;
+	z-index: -99;
+	.hero-text {
+		font-size: 43px;
+		letter-spacing: .1em;
+	}
+}
+//Contact 
+.page-id-10 .hero {
+	background-color: $dark-blue;
+	.hero-text {
+		max-width: 800px;
+		margin: 0 auto;
+		padding-bottom: 30px;
+	}
+	.hero-title h1 {
+		font-size: 43px;
+		color: $orange;
+		text-transform: uppercase;
+		padding-bottom: 0;
+	}
+	.hero-subtitle {
+		color: #fff;
+		font-size: 18px;
+	}
+	
+	hr {
+		color: $orange;
+		width: 142px;
+		border-top: 2px solid $orange;
+		border-style: solid;
+	}
+}
 //Mystery Shopping
 .page-id-6 .hero {
 	background-color: $dark-blue;

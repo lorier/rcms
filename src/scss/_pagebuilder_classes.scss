@@ -9,7 +9,8 @@
 	margin: 0 auto;
 }
 .desktop-max-width-eight {
-	
+	max-width: 800px;
+	margin: 0 auto;
 }
 .no-bullets ul {
 	margin: 0;
@@ -48,8 +49,9 @@
 	color: white;
 	border-color: white;	
 }
-.hr-left{
+.hr-left hr {
 	text-align: left;
+	margin-left: 0;
 }
 
 //Stretched panels
@@ -132,8 +134,8 @@
 			color: white;
 		}
 	}
-
 }
+
 .portal-band {
 	font-size: 18px;
 	a, 
@@ -156,12 +158,24 @@
 		margin-left: 0;
 		margin-bottom: 20px !important;
 		li.tab-title {
-			margin-right: 20px !important;
-		}
-		.tab-title a {
-			padding: 10px 0;
+			margin-right: 40px !important;
 		}
 	}
+	.so-widget-ink-tabs-tabs-b85a621d3e32 .tabs .tab-title a {
+		padding: 10px 0;
+		background-color: transparent;
+	}
+}
+//About page
+#pl-9 {
+	padding-top: 40px;
+
+#pg-w574e15b850867-1, #pg-w574e15b850867-2{
+	.panel-widget-style {
+		border-bottom: 6px solid $blue;
+		height: 410px;
+	}
+}
 }
 // // Services and Expertise top panels
 // #expertise-panel {

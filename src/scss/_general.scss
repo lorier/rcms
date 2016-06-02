@@ -33,7 +33,9 @@ body {
 	font-family: $body-font;
 }
 
-
+.page-id-6 {
+	background-color: $lightest-gray;
+}
 // Helper Classes
 .desktop-hidden {
 	@media screen and (min-width: $desktop-nav-up){

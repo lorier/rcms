@@ -1,28 +1,100 @@
 // Shortcode classes
 // 
-.orange-panel {
-	background-color: $orange;
-	padding: 20px;
+// 
+.orange-panel,
+.blue-panel,
+.white-panel {
+	padding: 10px 40px;
 	position: relative;
-	float: left;
 	clear: left;
-	p {
-		max-width: 60%;
-	}
-	.outline-button {
-		position: absolute;
-		top: 35%;
-		right: 20px;
+	width: 100%;
+	margin: 20px 0;
+
+	a, 
+	a:active,
+	a:hover,
+	a:focus,
+	a:visited {
+		color: black;
+		text-decoration: underline;
 	}
 }
 .blue-panel {
 	background-color: $blue;
-	padding: 20px;
-	position: relative;
-	clear: left;
-	float: left;
+
 	.solid-button {
 		background-color: #fff;
+		
+	}
+}
 
+.white-panel {
+	background-color: white;
+	.solid-button {
+		background-color: $blue;
+		color: white;
+	}
+}
+.orange-panel {
+	background-color: $orange;
+	&.horizontal-call-to-action {
+		a.outline-button,
+		a.solid-button {
+			position: absolute;
+		    top: 28%;
+		    right: 52px;
+		}
+		float: left;
+		padding: 20px;
+		p,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			float: left;
+			max-width: 60%;
+			margin-bottom: 0;
+		}
+	}
+}
+
+a.outline-button {
+	    border: 2px solid #fff;
+	    padding: 10px 20px;
+	    color: white;
+	    text-decoration: none !important;
+	}
+a.solid-button {
+	display: inline-block;
+	margin-top: 20px;
+	background-color: #fff;
+    padding: 10px 20px;
+    color: $blue;
+    text-decoration: none !important;
+    &.pdf {
+	    padding-left: 25px;
+    }
+    &.pdf:before {
+    	font-family: 'FontAwesome';
+		content: '\f1c1';
+		font-size: 12px;
+		position: relative;
+		top: 0px;
+		right: 8px;
+    }
+}
+p>a.solid-button {
+	margin-top: 0;
+}
+
+a.linked-panel {
+	text-decoration: none;
+	h5 {font-size: 16px;}
+}
+.ultimate-guide {
+	h1, h2, h3, h4, h5, h6, p, a, span{
+		font-family: $body-font;
 	}
 }
