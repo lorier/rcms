@@ -199,11 +199,14 @@ body .genesis-nav-menu {
 	padding: 10px;
 	font-size: 12px;
 	text-align: right;
+	text-transform: uppercase;	
 
 	ul .portal-title {
 		padding-right: 10px;
 		color: black;
-		text-transform: uppercase
+	}
+	ul li {
+		margin-right: 0 !important;
 	}
 	ul .menu-item:hover a {
 		// background-color: rgba(255,255,255,0.1);
@@ -286,6 +289,7 @@ body .genesis-nav-menu {
     	text-transform: none;
     	color: white;
     	font-size: 16px;
+    	line-height: 19px;
     	padding: 12px 14px;
     }
     &:hover {

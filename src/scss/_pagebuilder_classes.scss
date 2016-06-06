@@ -86,15 +86,22 @@
 
 }
 //Check list (home page)
+#pl-4 #pgc-w5744c25df1e90-1-0 {
+	@media (max-width: 850px){
+		padding-left: 20px;
+	}
+}
 .check-list ul {
-	margin-left: 5px;
+	margin-left: 25px;
 }
 .check-list li{
 	list-style-type: none !important;
+	text-indent: none;
 	&:before {
 		font-family: 'FontAwesome';
 		content: '\f00c';
 		position: relative;
+		margin-left: -16px;
 		top: -1px;
 		right: 5px;
 		display: inline-block;

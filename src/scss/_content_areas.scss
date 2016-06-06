@@ -143,13 +143,31 @@ Content Area
 	color: $gray-rule;
 	border-bottom-style: none;
 }
+//mystery shopping
+.page-id-6 .entry-content .content ul li {
+	list-style-type: none;
+	text-indent: 0
+	&:before {
+	    font-family: FontAwesome;
+	    // f054
+	    content: '\f00c';
+	    position: relative;
+	    top: -1px;
+	    margin-left: -16px;
+	    right: 5px;
+	    display: inline-block;
+	    text-decoration: none;
+	    float: left;
+    }
+}
+
 
 //remove white at bottom of For Clients page and Your Exam Page
-.page-id-11, .page-id-268, .page-id-10, .page-id-392 {
-	.site-inner {
-		padding-bottom: 0;
-	}
-	.content article.page {
-		margin-bottom: 0;
-	}
-}
+// .page-id-11, .page-id-268, .page-id-10, .page-id-392 {
+// 	.site-inner {
+// 		padding-bottom: 0;
+// 	}
+// 	.content article.page {
+// 		margin-bottom: 0;
+// 	}
+// }
