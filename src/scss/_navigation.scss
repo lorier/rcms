@@ -317,6 +317,9 @@ body .genesis-nav-menu {
 		// display: inline-block;
 		// text-decoration: none;
     }
+    &.services>a {
+    	cursor: default;
+    }
     // Sub Menu
     .sub-menu {
     	border-bottom: 3px solid $orange;

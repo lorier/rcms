@@ -144,9 +144,11 @@ Content Area
 	border-bottom-style: none;
 }
 //mystery shopping
-.page-id-6 .entry-content .content ul li {
+.page-id-6 .entry-content .content ul li, 
+.page-id-7 .entry-content ul li, 
+.page-id-8 .entry-content ul li {
 	list-style-type: none;
-	text-indent: 0
+	text-indent: 0;
 	&:before {
 	    font-family: FontAwesome;
 	    // f054
