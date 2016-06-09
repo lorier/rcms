@@ -1,12 +1,23 @@
 // // ==== HEADERS ==== //
-// 
-// 
-// 
-// 
+
 .hero {
-	margin-top: -141px;
-	padding-top: 141px;
+	margin-top: -124px;
+	padding-top: 124px;
 }
+@media (max-width: $mobile-nav-down){
+	.page .site-container .hero {
+		margin-top: 0;
+		padding-top: 0;
+		height: 250px;
+		display: table;
+		width: 100%;
+		.wrap {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+}
+
 .home .hero {
 	background: $dark-gray url(images/header_home.jpg) no-repeat center top;
 	height: 524px;
@@ -59,6 +70,7 @@
 		}	
 	}
 }
+
 //About Page
 .page-id-9 .hero {
 	background: $dark-gray url(images/header_about.jpg) no-repeat center top;
@@ -66,13 +78,22 @@
 	position: relative;
 	z-index: -99;
 	.hero-text {
+		padding-top: 30px;
 		font-size: 43px;
 		letter-spacing: .1em;
 	}
 }
-//Contact 
-.page-id-10 .hero {
-	background-color: $dark-blue;
+
+
+//Common styles for Contact and Mystery Shopping Headers
+.page-id-10,
+.page-id-6,
+.page-id-7,
+.page-id-8 {
+	.hero {
+
+		background-color: $dark-blue;
+	}
 	.hero-text {
 		max-width: 800px;
 		margin: 0 auto;
@@ -88,7 +109,6 @@
 		color: #fff;
 		font-size: 18px;
 	}
-	
 	hr {
 		color: $orange;
 		width: 142px;
@@ -98,115 +118,67 @@
 }
 //Mystery Shopping
 .page-id-6 .hero {
-	background-color: $dark-blue;
-	.wrap{
-	}
 	.hero-text {
 		background: $dark-blue url('images/binoculars-large.png') 0 0 no-repeat;
 		padding-left: 200px;
-		max-width: 800px;
-		margin: 0 auto;
-		padding-bottom: 30px;
-	}
-	.hero-title, 
-	.hero-title h1 {
-		font-size: 43px;
-		color: $orange;
-		text-transform: uppercase;
-		padding-bottom: 0;
-	}
-	.hero-subtitle {
-		color: #fff;
-		font-size: 18px;
 	}
 }
 //Customer Satisfaction Survey
 .page-id-7 .hero {
 	margin-bottom: 40px;
-	background-color: $dark-blue;
-	.wrap{
-	}
+
 	.hero-text {
-		background: $dark-blue url('images/thumb-large.png') 0 0 no-repeat;
 		padding-left: 200px;
-		max-width: 800px;
-		margin: 0 auto;
-		padding-bottom: 30px;
-	}
-	.hero-title, 
-	.hero-title h1 {
-		font-size: 43px;
-		color: $orange;
-		text-transform: uppercase;
-		padding-bottom: 0;
-	}
-	.hero-subtitle {
-		color: #fff;
-		font-size: 18px;
+		background: $dark-blue url('images/thumb-large.png') 0 0 no-repeat;
 	}
 }
-
 //Audits
 .page-id-8 .hero {
 	background-color: $dark-blue;
 	margin-bottom: 40px;
-	.wrap{
-	}
 	.hero-text {
-		background: $dark-blue url('images/clipboard-large.png') 0 0 no-repeat;
 		padding-left: 200px;
+		background: $dark-blue url('images/clipboard-large.png') 0 0 no-repeat;
+	}
+}
+//Scams 
+.page-id-100 .hero {
+	background-color: $orange;
+	margin-bottom: 40px;
+	
+	.hero-text {
 		max-width: 800px;
 		margin: 0 auto;
 		padding-bottom: 30px;
+		padding-top: 30px;
 	}
 	.hero-title, 
 	.hero-title h1 {
 		font-size: 43px;
-		color: $orange;
+		color: white;
 		text-transform: uppercase;
 		padding-bottom: 0;
 	}
-	.hero-subtitle {
-		color: #fff;
-		font-size: 18px;
-	}
 }
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
+.page-id-100 .site-header {
+	background-color: $dark-blue;
+}
+@media screen and ( max-width: $mobile-nav-down ){
+	.page-id-6 .hero,
+	.page-id-7 .hero,
+	.page-id-8 .hero,
+	.page-id-10 .hero,
+	.page-id-9 .hero {
+		padding: 150px 10px 30px 10px
+	}
+	
+}
+
 // OLD Kickstart bulk overrides
 .before-contact, .before-content, .home-top-slider  {
 	position: inherit;
 }
+
 .header-image .before-contact, .header-image .before-content, .header-image .home-top-slider{
 	position: inherit;
 	margin-bottom: 0;
@@ -216,6 +188,7 @@
 	margin-top: 0;
 	height: 355px;
 }
+
 #home-top {
 	background: $blue url('images/home-top.png') no-repeat center center;
 	.widget_text {
@@ -282,104 +255,5 @@
 		}
 	}
 }
-//Individual Page Headers
-//
-.banner-strip {
-	text-align: center;
-	height: 152px;
-}
-.banner-strip {
-	display: table;
-	width: 100%;
-}
-.banner-strip h1 {
-	display: table-cell;
-	vertical-align: middle;
-}
-.blog,
-.archive,
-.single { 
-	& .banner-strip h1 {
-		font-size: 50px;
-		line-height: 40px;
-	}
-}
-//all other pages not specified below will be yellow
-.banner-strip {
-	background: $orange url('images/header-yellow.png') no-repeat top center;
-	h1 {
-		color: $blue;
-	}
-}
 
-.banner-strip span.blog-subtitle {
-	font-size: 25px;
-	line-height: 25px;
-}
-//Careers (Red)
-.page-id-11 .banner-strip,
-.page-id-53 .banner-strip {
-	background: $orange url('images/header-red.png') no-repeat top center;
-	h1 {
-		color: white;
-	}
-}
-//About/Contact (Yellow)
-.page-id-12 .banner-strip,
-.page-id-392 .banner-strip{
-	background: $orange url('images/header-yellow.png') no-repeat top center;
-	h1 {
-		color: white;
-	}
-}
-//Clients
-.page-id-11 .banner-strip{
-	background: $orange url('images/header-yellow.png') no-repeat top center;
-	h1 {
-		color: white;
-	}	
-}
-.blog .banner-strip,
-.single .banner-strip,
-.archive .banner-strip {
-	background: $blue url('images/header-purple.png') no-repeat top center;
-	h1 {
-		color: white;
-	}	
-}
-// Expertise	
-.page-id-9 .banner-strip,
-.parent-pageid-9 .banner-strip
- {
-	background: $blue url('images/header-green-expertise.png') no-repeat top center;
-	h1 {
-		color: white;
-		max-width: 600px
-	}	
-}
-//Services
-.page-id-8 .banner-strip,
-.parent-pageid-8 .banner-strip {
-	background: $orange url('images/header-yellow-services.png') no-repeat top center;
-	h1 {
-		color: white;
-		max-width: 600px;
-	}	
-}
-// Exam 
-.page-id-268 .banner-strip,
-.parent-pageid-268 .banner-strip {
-	background: $blue url('images/header-purple-exam.png') no-repeat top center;
-	h1 {
-		color: white;
-		max-width: 600px;
-	}	
-}
-//For Providers
-.page-id-10 .banner-strip {
-	background: $blue url('images/header-green-providers.png') no-repeat top center;
-	h1 {
-		color: white;
-		max-width: 600px;
-	}	
-}
+

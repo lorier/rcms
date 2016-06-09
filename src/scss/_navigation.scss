@@ -134,7 +134,7 @@
 
 // Logo 
 .site-header .wrap {
-	background: none;
+	background: transparent;
 	padding: 0;
 }
 .site-header .site-title {
@@ -148,6 +148,7 @@
 	background-repeat: no-repeat;
 	background-position: left bottom;
 	background-size: 200px auto;
+	margin-bottom: 0;
 
 	@media screen and (max-width: $mobile-nav-down){
 		background-size: 150px;
@@ -163,22 +164,26 @@
 	display: block;
 	text-indent: -9999px;
 }
-
-@media screen and (max-width: 1000px){
+@media screen and (max-width: $mobile-nav-down){
 	.site-header .widget-area {
-		float: none;
-		text-align: center;
-	}
-	.title-area {
-		float: none;
-	}
-	.site-title {
-	    margin: 0 auto;
-	    height: 100px;
-	    width: 200px;
 	    float: none;
-    }
+	}
 }
+// @media screen and (max-width: 1000px){
+// 	.site-header .widget-area {
+// 		float: none;
+// 		// text-align: center;
+// 	}
+// 	.title-area {
+// 		float: none;
+// 	}
+// 	.site-title {
+// 	    margin: 0 auto;
+// 	    // height: 100px;
+// 	    // width: 200px;
+// 	    // float: none;
+//     }
+// }
 
 // Navigation
 body .genesis-nav-menu {
@@ -307,17 +312,7 @@ body .genesis-nav-menu {
     	background-color: transparent;
     	// text-decoration: underline;
     }
-
-    &.menu-item-has-children > a:after {
-		// font-family: 'FontAwesome';
-		// content: '\f0dd';
-		// position: relative;
-		// top: -1px;
-		// right: -5px;
-		// display: inline-block;
-		// text-decoration: none;
-    }
-    &.services>a {
+    &.services .sf-with-ul {
     	cursor: default;
     }
     // Sub Menu
@@ -393,14 +388,28 @@ body .genesis-nav-menu {
 
 	}
 }
+@media screen and (max-width: 500px){
+	#portal-logins a{
+		font-size: 12px;
+	}
+}
+
 // Hamburger Menu
 @media screen and (max-width: $mobile-nav-down){
-
-	.site-header {
-		// background-color: white;
+	.header-image .site-header .wrap {
+		// background: url(images/logo.png) no-repeat 10px 10px;
+		// background-size: 93px 48px;
+		// padding: 0;
 	}
+	.header-image .site-header .wrap {
+		background-position: 20px center;
+		background-color: $dark-blue;
+		padding: 0;
+	}
+
 	.site-header .widget-area.header-widget-area {
 		padding: 0;
+		background-color: $dark-blue;
 	}
 	ul#menu-main-navigation{
 		background-color: white;
@@ -458,6 +467,10 @@ body .genesis-nav-menu {
 		outline: none;
 		text-decoration: none;
 	 }
+	.js .menu-toggle:focus {
+		color: white;
+	} 
+
 	 .js .genesis-nav-menu .menu-item a {
 	 	// color: black;
 	 	&:hover {

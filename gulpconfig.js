@@ -64,7 +64,6 @@ module.exports = {
       core: ['core']
     , pageloader: ['pageloader', 'core']
     , responsivemenu: ['responsivemenu']
-    , stickynav: ['stickynav']
     }
   , chunks: { // Chunks are arrays of paths or globs matching a set of source files; this way you can organize a bunch of scripts that go together into pieces that can then be bundled (above)
       // The core chunk is loaded no matter what; put essential scripts that you want loaded by your theme in here
@@ -84,9 +83,6 @@ module.exports = {
       ]
     , responsivemenu: [
       src+'js/responsive-menu.js'
-    ]
-    , stickynav: [
-      src+'js/sticky-nav.js'
     ]
     }
   , dest: build+'js/' // Where the scripts end up in your theme

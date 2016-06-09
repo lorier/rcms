@@ -73,10 +73,7 @@
 
 //content-specific vert margin correction
 
-//Home page
-// #pl-4 > .panel-grid{
-// 	margin-bottom: 0;
-// }
+
 #pl-4 > .panel-grid,
 #pl-9 > .panel-grid {
 	margin-bottom: 0 !important;
@@ -199,113 +196,29 @@
 		background-color: transparent;
 	}
 }
+div#panel-w5755d05f8b1d3-1-0-0:hover,
+div#panel-w5758a200e173d-1-0-0:hover,
+div#panel-w5755d05f8b1d3-1-2-0:hover {
+	border-bottom: 5px solid $orange;
+}
+
 //About page
 #pl-9 {
 	padding-top: 40px;
 
-#pg-w574e15b850867-1, #pg-w574e15b850867-2{
-	.panel-widget-style {
-		border-bottom: 6px solid $blue;
-		height: 410px;
+	#pg-w574e15b850867-1, #pg-w574e15b850867-2{
+		.panel-widget-style {
+			border-bottom: 6px solid $blue;
+			height: 410px;
+		}
 	}
 }
+// Our Services Panels - active states
+.page-id-6 #panel-w5758a200e173d-1-0-0, 
+.page-id-8 #panel-w5755f7e1b7b82-1-2-0, 
+.page-id-7 #panel-w5755d05f8b1d3-1-1-0 {
+	border-bottom: 5px solid $orange;
 }
-// // Services and Expertise top panels
-// #expertise-panel {
-// 	.panel-grid .panel-grid-cell {
-// 		padding: 0;
-// 	}
-// 	&.panel-grid > .panel-grid-cell {
-// 		padding-left: 10px;
-// 		padding-right: 10px;
-// 	}
-// 	.expertise-panel {
-// 		border: 1px solid $gray-rule;
-// 	}
-// 	.expertise-panel .panel-grid {
-// 		margin-bottom: 0px;
-// 	}
-// 	.expertise-panel a {
-// 		color: black;
-// 		&:after {
-// 			font-family: 'FontAwesome';
-// 			content: '\f105';
-// 			font-size: 12px;
-// 			position: relative;
-// 			top: 0px;
-// 			right: -5px;;
-// 		}
-// 	}
-// 	.expertise-panel-header-row .panel-grid-cell {
-// 		width: 100%;
-// 	}
-// 	.expertise-panel-header {
-// 		width: 100%;
-// 		display: table;
-// 		h3 {
-// 			display: table-cell;
-// 			vertical-align: middle;
-// 			margin-bottom: 0;
-// 			color: white;
-// 		}
-// 	}
-// 	.siteorigin-widget-tinymce {
-// 		p:last-child {
-// 			margin-bottom: 0;
-// 		}
-// 	}
-// 	.so-panel .panel-widget-style {
-// 		// padding: 0 !important;
-// 	}
-// 	.widget_siteorigin-panels-builder {
-// 		margin-bottom: 0 !important;
-// 	}
-// 	.expertise-panel.panel-widget-style {
-// 		border-bottom: none !important;
-
-// 	}
-
-// }
-// //height of panels for expertise page
-
-// // services
-// .page-id-8 #expertise-panel {
-// 	.expertise-panel {
-// 		height: 320px;
-// 		@media screen and (max-width: 1024px) {
-// 			height: 400px;
-// 		}
-// 		@media screen and (max-width: 850px) {
-// 			height: 450px;
-// 		}
-// 		@media screen and (max-width: 780px) {
-// 			height: auto;
-// 		}
-// 	}
-// 	.expertise-panel-header {
-// 		min-height: 75px;
-// 	}
-// }
-
-
-// // expertise
-// .page-id-9 #expertise-panel {
-// 	.expertise-panel {
-// 		height: 250px;
-// 		@media screen and (max-width: 950px) {
-// 			height: 300px;
-// 		}
-// 		@media screen and (max-width: 780px) {
-// 			height: auto;
-// 		}
-// 		.expertise-panel-header {
-// 			min-height: 95px;
-// 		}
-// 	}
-// }
-
-
-
 
 // wire buttons
 .widget_sow-button .so-widget-sow-button .ow-button-base a {

@@ -47,7 +47,7 @@ function rcms_linked_panel( $atts , $content = null ) {
     $link = $atts['link_url'];
 
     $short = '<a class="linked-panel" href="';
-    $short .= esc_url($link);
+    $short .= get_site_url().esc_url($link);
     $short .= '">';
     $short .= $content;
     $short .= '</a>';

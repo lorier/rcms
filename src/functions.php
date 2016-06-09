@@ -13,7 +13,7 @@ load_child_theme_textdomain( 'lean-kickstart', apply_filters( 'child_theme_textd
 
 
 // Child theme (do not remove)
-define( 'CHILD_THEME_NAME', 'MCN' );
+define( 'CHILD_THEME_NAME', 'Reality Check Mystery Shopping' );
 define( 'CHILD_THEME_URL', 'http://rcms.com' );
 define( 'CHILD_THEME_VERSION', '0.0.1' );
 
