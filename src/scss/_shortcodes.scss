@@ -45,6 +45,7 @@
 		a:hover {
 			color: white;
 		}
+
 		float: left;
 		padding: 30px;
 		p,
@@ -66,6 +67,9 @@ a.outline-button {
 	    padding: 10px 25px;
 	    color: white;
 	    text-decoration: none !important;
+	    &:hover {
+			background-color: rgba(255,255,255, 0.15);
+		}
 	}
 a.solid-button {
 	display: inline-block;
@@ -92,7 +96,11 @@ p>a.solid-button {
 
 a.linked-panel {
 	text-decoration: none;
-	h5 {font-size: 16px;}
+	h5 {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+	}
 	display: block;
 }
 .ultimate-guide {

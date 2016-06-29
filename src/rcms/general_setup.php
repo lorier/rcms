@@ -205,7 +205,7 @@ remove_action('genesis_meta', 'genesis_load_favicon');
 add_filter( 'genesis_pre_load_favicon', 'rcms_favicon_filter' );
 function rcms_favicon_filter( $favicon_url ) {
 	$base = get_stylesheet_directory_uri();
-	return  esc_url($base) . 'images/favicon.ico';
+	return  esc_url($base) . '/images/favicon.ico';
 }
 
 add_filter( 'genesis_post_info', 'rcms_post_info_filter' );
