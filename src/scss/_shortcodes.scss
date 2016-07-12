@@ -9,10 +9,10 @@
 	margin: 20px 0;
 
 	a, 
-	a:active,
+	a:visited, 
 	a:hover,
-	a:focus,
-	a:visited {
+	a:active,
+	a:focus{
 		color: black;
 		text-decoration: underline;
 	}
@@ -21,8 +21,7 @@
 	background-color: $blue;
 
 	.solid-button {
-		background-color: #fff;
-		
+		background-color: #fff;	
 	}
 }
 
@@ -42,8 +41,12 @@
 		    top: 28%;
 		    right: 52px;
 		}
-		a:hover {
-			color: white;
+		a.outline-button,
+		a.outline-button:visited,
+		a.outline-button:hover,
+		a.outline-button:active,
+		a.outline-button:focus{
+			color: white !important;
 		}
 
 		float: left;

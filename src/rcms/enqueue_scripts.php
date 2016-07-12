@@ -20,7 +20,6 @@ function kickstart_fonts_scripts() {
 // Enqueue scripts
 add_action( 'wp_enqueue_scripts', 'rcms_enqueue_stickynav_script' );
 function rcms_enqueue_stickynav_script() {
-    wp_enqueue_script( 'sample-sticky-menu', get_stylesheet_directory_uri() . '/js/stickynav.js', array( 'jquery' ), '1.0.0' );
     wp_enqueue_script( 'core', get_stylesheet_directory_uri() . '/js/core.js', array( 'jquery' ), '1.0.0' );
 
 }

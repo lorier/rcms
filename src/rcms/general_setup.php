@@ -16,16 +16,12 @@ add_theme_support( 'genesis-accessibility', array( 'headings', 'drop-down-menu',
 // Add viewport meta tag for mobile browsers
 add_theme_support( 'genesis-responsive-viewport' );
 
-// Add support for custom background
-// add_theme_support( 'custom-background', array( 'wp-head-callback' => 'kickstart_background_callback' ) );
 
 // Move menu to Header Right and remove the wrap div
 remove_action( 'genesis_after_header','genesis_do_nav' ) ;
 add_action( 'genesis_header_right','genesis_do_nav' );
 add_theme_support( 'genesis-structural-wraps', array( 'header', 'footer-widgets', 'footer' ) );
 
-// Unregister secondary navigation menu
-// add_theme_support( 'genesis-menus', array( 'primary' => __( 'Primary Navigation Menu', 'genesis' ) ) );
 
 // Unregister alternate layouts
 genesis_unregister_layout( 'content-sidebar-sidebar' );
@@ -40,8 +36,6 @@ function kickstart_background_callback() {
     printf( '<style>body { background-color: #%s; }</style>' . "\n", get_background_color() );
 }
 
-// Add support for 5-column footer widgets
-// add_theme_support( 'genesis-footer-widgets', 4 );
 
 // Add post formats
 add_theme_support( 'post-formats', array( 'aside', 'status', 'quote' ) );
@@ -66,8 +60,6 @@ function kickstart_read_more_link() {
 
 //* Reposition the secondary navigation menu
 remove_action( 'genesis_after_header', 'genesis_do_subnav' );
-// add_action( 'genesis_header', 'rcms_secondary_nav', 1 );
-
 
 
 add_action('genesis_header', 'rcms_subnav_portal_logins', 0);
@@ -128,32 +120,6 @@ function rcms_add_header_text(){
 // Enable shortcode use in widgets
 add_filter('widget_text', 'do_shortcode');
 
-// // Add banner containers and titles
-// // add_action('genesis_after_header', 'rcms_banner_strip' );
-// function rcms_banner_strip(){
-// 	if ( !is_front_page() ){
-// 		global $post;
-// 		$output = '<div class="banner-strip"><h1 class="banner-title">';
-// 		if ( is_page() ){
-// 			$output .= get_the_title( $post ).'</h1></div>';
-// 		}
-// 		else if ( is_404() ){
-// 			$output .= 'Page Not Found</h1></div>';
-// 		}
-// 		else if ( is_search() ) {
-// 			$output .= 'Search Results</h1></div>';
-// 		}
-// 		else if ( is_home() || is_single() || is_archive() ){
-// 			global $post;
-// 			$title = apply_filters('the_title',get_page( get_option('page_for_posts') )->post_title );
-// 			$output .=  $title . '<br><span class="blog-subtitle">News, Insights & Opinions</span></h1></div>';
-// 		} 
-// 		else { //for all other possible options so the page layout doesn't break
-// 			$output .= get_the_title( $post ).'</h1></div>';
-// 		}
-// 		echo $output;
-// 	}
-// }
 // Add "now viewing" to tag pages 
 add_action('genesis_before_loop', 'rcms_add_tag_title');
 
