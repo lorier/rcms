@@ -204,17 +204,24 @@
 .widget_ink-tabs {
 	max-width: 800px;
 	margin: 0 auto;
-	.tabs {
+	> div > div > ul {
 		margin-left: 0;
 		margin-bottom: 20px !important;
-		li.tab-title {
-			margin-right: 40px !important;
+		list-style-type: none;
+	}
+	#shopping-tabs-1,
+	#shopping-tabs-2 {
+		margin-right: 40px !important;
+		list-style-type: none;
+		margin-left: 15px;
+		a {
+			padding: 10px 0;
+			background-color: transparent;			
 		}
 	}
-	.so-widget-ink-tabs-tabs-b85a621d3e32 .tabs .tab-title a {
-		padding: 10px 0;
-		background-color: transparent;
-	}
+	// .so-widget-ink-tabs-tabs-b85a621d3e32 > ul #shopping-tabs-1 a,
+	// .so-widget-ink-tabs-tabs-b85a621d3e32 > ul #shopping-tabs-2 a {
+	// }
 }
 div#panel-w5755d05f8b1d3-1-0-0:hover,
 div#panel-w5758a200e173d-1-0-0:hover,

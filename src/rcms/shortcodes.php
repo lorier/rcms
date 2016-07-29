@@ -152,5 +152,3 @@ function rcms_cta_button( $atts, $content = null ){
 
     return $short;
 }
-
-// add_shortcode( 'sign-up-band', 'rcm_sign_up' );
